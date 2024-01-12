@@ -40,6 +40,9 @@ app.use("/assets", express.static(path.join(__dirname, 'public/assets')))
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
+
+        // console.log(req)
+        // console.log(file)
         cb(null, "public/assets");
     },
     filename : function(req, file, cb){
@@ -51,7 +54,10 @@ const upload = multer({ storage })
 
 // routes with files
 
+/* THE KEY IN THE FRONTEND SHOULD BE NAMED picture */
 /* app.Method(route,Middleware,calllbackFn) */
+
+
 app.post("/auth/register", upload.single('picture'), register)
 app.post("/post", verifyToken, upload.single('picture'), createPost);
 

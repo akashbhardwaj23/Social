@@ -5,6 +5,7 @@ import User from "../models/User.js"
 /* Register User Authentication */
 
 export const register = async (req, res) => {
+    console.log(req.body.picturePath)
     try {
         const {
             firstName,
@@ -36,6 +37,8 @@ export const register = async (req, res) => {
         );
 
         const savedUser = await newUser.save()
+
+        console.log(savedUser)
 
         res.status(201).json(savedUser)
 

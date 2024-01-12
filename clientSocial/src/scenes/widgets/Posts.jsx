@@ -55,9 +55,8 @@ const Posts = ({userId, isProfile = false}) => {
             console.log(posts)
 
             console.log(isProfile)
-            if(!posts){
-                return null
-            }
+           if(!posts) return null;
+           if(posts.ErrorMessage) return <h1>Hi from DataBase</h1>
 
          return (
             <>

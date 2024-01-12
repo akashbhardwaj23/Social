@@ -53,7 +53,7 @@ const initialValueLogin = {
 
 
 function Form() {
-    const [pageType, setPageType] = useState("register")
+    const [pageType, setPageType] = useState("login")
     const {palette} = useTheme()
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -64,11 +64,14 @@ function Form() {
         // this allows us to send data info with image
         const formData = new FormData();
         for(let value in values) {
+            console.log(value ," ", values[value])
             formData.append(value, values[value])
         }   
 
         // picture Path will be the name of the file
         formData.append("picturePath", values.picture.path)
+
+        console.log(values.picture.path)
 
         const savedUserResponse = await fetch("http://localhost:3001/auth/register", 
             {
@@ -341,7 +344,7 @@ function Form() {
                         {
                             textDecoration: "underline",
                             color: palette.primary.main,
-                            "&:hover": {cursor:"pointer", color:palette.primary.light}
+                            "&:hover": {cursor:"pointer", color:palette.primary.dark}
                         }
                     }
                        

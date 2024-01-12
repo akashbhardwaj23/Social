@@ -72,6 +72,7 @@ const Post = ({
             </Typography>
 
             {picturePath && (
+                // Here we are taking the original picture from our local storage
                 <img width={"100%"} height={"auto"} src={`http://localhost:3001/assets/${picturePath}`} alt="post" style={{borderRadius:"0.75rem", marginTop:"0.75rem"}} />
             )}
 

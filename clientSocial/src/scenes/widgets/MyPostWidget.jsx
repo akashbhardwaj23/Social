@@ -170,9 +170,10 @@ return (
                     <Button
                         disabled = {!post}
                         onClick={handlePost}
+            
                         sx={
                             {
-                                color: palette.background.alt,
+                                color: palette.neutral.medium,
                                 backgroundColor: palette.primary.main,
                                 borderRadius: "3rem"
                             }
