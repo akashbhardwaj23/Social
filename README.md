@@ -1,5 +1,8 @@
 <h1> Social Media Site </h1>
 
+![picture alt](./clientSocial/assets/Social.png "Title is optional")
+
+
 ## Its a Social Media Site just like facebook and instagram which lets you make friends Interact with those friends 
 
 # What we mean by Interaction
