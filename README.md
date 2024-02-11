@@ -1,14 +1,23 @@
 <h1> Social Media Site </h1>
 
-![picture alt](./clientSocial/assets/Social.png "Title is optional")
+![picture alt](./clientSocial/src/assets/Social.png "Title is optional")
+
+
 
 
 ## Its a Social Media Site just like facebook and instagram which lets you make friends Interact with those friends 
 
 # What we mean by Interaction
 
- Markup : 1. Make Friends By Sending Them Friend Request. If they accepted Your Request Now you Both are Friends Yayy             
-          2. Also Like Functionality is There So you could like there Amazing Pictures and comment on there Pictures As Well
+ 1. Make Friends By Sending Them Friend Request. If they accepted Your Request Now you Both are Friends Yayy..
+
+ 2. Also Like Functionality is There So you could like there Amazing Pictures and comment on there Pictures As Well
+
+
+ ### Functionality Of Login
+ -------------------------------------------------------------------------
+
+ ![picture alt](./clientSocial//src/assets/SocialLogin.png)
         
 
 ## How Can You Start The Application Locally
