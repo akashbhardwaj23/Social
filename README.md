@@ -18,6 +18,11 @@
  -------------------------------------------------------------------------
 
  ![picture alt](./clientSocial//src/assets/SocialLogin.png)
+
+
+# Home
+
+ ![home](./clientSocial//src/assets/Home.png)
         
 
 ## How Can You Start The Application Locally
