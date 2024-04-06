@@ -11,13 +11,13 @@ function LoginPage() {
   return (
     <Box>
       <div
-        className={`w-full bg-[${theme.palette.background.alt}] py-4 px-[6%] text-center`}
+        className={`w-full bg-[${theme.palette.background.alt}] pt-4 px-[6%] text-center`}
       >
 
         
         <h1 className="font-bold text-[3rem] text-[#00d5fa]">Social</h1>
       </div>
-      <div className={`${isNonMobileScreen ? "w-1/2":"w-11/12"} p-8 my-8 mx-auto rounded-3xl bg-[${theme.palette.background.alt}]`}>
+      <div className={`${isNonMobileScreen ? "w-1/2":"w-11/12"} p-6 mx-auto rounded-3xl bg-[${theme.palette.background.alt}]`}>
         <h5 className={`font-medium mb-6`}>
             Welcome To Social, the social media for EveryOne
         </h5>
