@@ -34,7 +34,7 @@ const registerSchema = yup.object().shape({
 
 const loginSchema = yup.object().shape({
     email: yup.string().email("Invaild email").required("required"),
-    password: yup.string().required("password is reuired")
+    password: yup.string().required("password is required")
 })
 
 const initialValuesRegister = {
