@@ -38,9 +38,14 @@ export const register = async (req, res) => {
 
         const savedUser = await newUser.save()
 
-        console.log(savedUser)
+        console.log(savedUser);
 
-        res.status(201).json(savedUser)
+        const token = await jwt.sign({id : savedUser._id }, process.env.JWT_SECRET)
+
+
+        delete savedUser.password;
+
+        res.status(201).json({savedUser, token})
 
         // need to log the password field to see what we get
 
