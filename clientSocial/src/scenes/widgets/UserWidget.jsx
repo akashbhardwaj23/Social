@@ -11,6 +11,7 @@ import WidgetComponent from "../../components/WidgetComponet";
 import { useSelector} from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../../config";
 
 
 const UserWidget = ({ userId, picturePath}) => {
@@ -23,7 +24,7 @@ const UserWidget = ({ userId, picturePath}) => {
     const main = palette.neutral.main
 
     const getUser = async () => {
-        const response = await fetch(`http://localhost:3001/users/${userId}`, 
+        const response = await fetch(`${BACKEND_URL}/users/${userId}`, 
         {
            method: "GET",
            headers:{

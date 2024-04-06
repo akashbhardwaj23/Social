@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://social-production-abd9.up.railway.app";

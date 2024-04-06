@@ -7,6 +7,7 @@ import FriendsList from '../widgets/FriendsList'
 import MyPostWidget from '../widgets/MyPostWidget'
 import UserWidget from '../widgets/UserWidget'
 import Posts from '../widgets/Posts'
+import { BACKEND_URL } from '../../config'
 
 
 function ProfilePage() {
@@ -18,7 +19,7 @@ function ProfilePage() {
   console.log(token)
 
   const getUser = async () => {
-    const response = await fetch(`http://localhost:3001/users/${userId}`,
+    const response = await fetch(`${BACKEND_URL}/users/${userId}`,
       {
         method: 'GET',
         headers: {Authorization: `Bearer ${token}`},

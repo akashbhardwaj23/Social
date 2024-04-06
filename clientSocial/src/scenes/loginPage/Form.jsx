@@ -15,6 +15,7 @@ import { useDispatch } from 'react-redux'
 import { setLogin } from '../../state/slice'
 import Dropzone from 'react-dropzone'
 import FlexBetween from '../../components/FlexBetween'
+import { BACKEND_URL } from '../../config'
 
 
 // Dropzone - to handle file upload
@@ -73,7 +74,7 @@ function Form() {
 
         console.log(values.picture.path)
 
-        const savedUserResponse = await fetch("http://localhost:3001/auth/register", 
+        const savedUserResponse = await fetch(`${BACKEND_URL}/auth/register`, 
             {
                 method: "POST",
                 body: formData
@@ -92,7 +93,7 @@ function Form() {
 
     const login = async (values, onSubmitProps) => {
         const loggedUserResponse = await fetch(
-            "http://localhost:3001/auth/login",
+            `${BACKEND_URL}/auth/login`,
             {
                 method: "POST",
                 headers: {

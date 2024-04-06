@@ -17,6 +17,7 @@ import WidgetComponent from "../../components/WidgetComponet";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "../../state/slice";
+import { BACKEND_URL } from "../../config";
 
 const Post = ({
   postId,
@@ -43,7 +44,7 @@ const Post = ({
     const main = palette.neutral.main;
 
     const patchLike = async () => {
-        const response = await fetch(`http://localhost:3001/posts/${postId}/like`,
+        const response = await fetch(`${BACKEND_URL}/posts/${postId}/like`,
             {
                 method: 'PATCH',
                 headers: {
@@ -73,7 +74,7 @@ const Post = ({
 
             {picturePath && (
                 // Here we are taking the original picture from our local storage
-                <img width={"100%"} height={"auto"} src={`http://localhost:3001/assets/${picturePath}`} alt="post" style={{borderRadius:"0.75rem", marginTop:"0.75rem"}} />
+                <img width={"100%"} height={"auto"} src={`${BACKEND_URL}/assets/${picturePath}`} alt="post" style={{borderRadius:"0.75rem", marginTop:"0.75rem"}} />
             )}
 
             <FlexBetween marginTop={"0.25rem"}>

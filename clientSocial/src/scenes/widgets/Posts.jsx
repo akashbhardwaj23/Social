@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../../state/slice";
 import Post from "../widgets/Post";
+import { BACKEND_URL } from "../../config";
 
 const Posts = ({userId, isProfile = false}) => {
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const Posts = ({userId, isProfile = false}) => {
 
     const getPosts = async () => {
         console.log("hi from posts get")
-        const response = await fetch(`http://localhost:3001/posts`,
+        const response = await fetch(`${BACKEND_URL}/posts`,
             {
                 method: 'GET',
                 headers: { Authorization: `Bearer ${token}` },
@@ -30,7 +31,7 @@ const Posts = ({userId, isProfile = false}) => {
     const getUserPost = async () => {
 
         console.log('hi from getUserPost')
-        const response = await fetch(`http://localhost:3001/posts/${userId}/posts`,
+        const response = await fetch(`${BACKEND_URL}/posts/${userId}/posts`,
             {
                 method: 'GET',
                 headers: { Authorization: `Bearer ${token}` },

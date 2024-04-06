@@ -1,6 +1,7 @@
 import { Typography, useTheme } from "@mui/material"
 import FlexBetween from "../../components/FlexBetween"
 import WidgetComponent from "../../components/WidgetComponet"
+import { BACKEND_URL } from "../../config";
 
 const AdWidget = () => {
     const {palette} = useTheme();
@@ -17,7 +18,7 @@ const AdWidget = () => {
                 </Typography>
                 <Typography color={medium}>Create Add</Typography>
             </FlexBetween>
-            <img width={"100%"} height={"auto"} src="http://localhost:3001/assets/info4.jpeg" alt="Advertisement" style={{borderRadius:"0.75rem", margin:"0.75rem 0"}} />
+            <img width={"100%"} height={"auto"} src={`${BACKEND_URL}/assets/info4.jpeg`} alt="Advertisement" style={{borderRadius:"0.75rem", margin:"0.75rem 0"}} />
             <FlexBetween>
                 <Typography color={main}>Mika</Typography>
                 <Typography color={medium}>Mica.com</Typography>

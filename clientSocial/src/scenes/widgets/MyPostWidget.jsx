@@ -15,6 +15,7 @@ import WidgetComponent from "../../components/WidgetComponet"
 import { useState } from 'react';
 import { useDispatch, useSelector} from "react-redux"
 import {setPosts} from '../../state/slice'
+import { BACKEND_URL } from '../../config';
 
 const MyPostWidget = ({picturePath}) => {
     const dispatch = useDispatch()
@@ -40,7 +41,7 @@ const MyPostWidget = ({picturePath}) => {
             formData.append("picturePath", image.name)
         }
 
-        const response = await fetch("http://localhost:3001/post", {
+        const response = await fetch(`${BACKEND_URL}/post`, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`
