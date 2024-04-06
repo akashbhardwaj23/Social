@@ -87,12 +87,7 @@ function Form() {
         onSubmitProps.resetForm()
 
         if(savedUser) {
-            dispatch(
-                setLogin({
-                    user: savedUser.user,
-                    token : savedUser.token
-                })
-            )
+            setPageType("login")
         }
     }
 
