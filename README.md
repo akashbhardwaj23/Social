@@ -22,7 +22,7 @@
 
 # Home
 
- ![home](./clientSocial//src/assets/Home.png)
+ ![home](./clientSocial//src/assets/home.png)
         
 
 ## How Can You Start The Application Locally
