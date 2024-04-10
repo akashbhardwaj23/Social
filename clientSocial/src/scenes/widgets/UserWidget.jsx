@@ -66,7 +66,8 @@ const {
              onClick={() => navigate(`/profile/${userId}`)}
             >
                 <FlexBetween gap={"1rem"}>
-                    <UserImage image = {picturePath}/>
+                    <UserImage image = {user?.picturePath}/>
+                    {console.log(user?.picturePath)}
                     <Box>
                         <Typography
                             variant="h4"

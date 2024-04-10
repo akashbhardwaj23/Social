@@ -12,7 +12,7 @@ const UserImage = ({image, size = "60px"}) => {
          
 
         >
-            <img src={`${BACKEND_URL}/assets/${image}`} style={{objectFit: "cover", border:"2px dashed #1E40AF", filter:"contrast(110%)"}} width={size} height={size} alt="userImg"   />
+            <img src={`${image}`} style={{objectFit: "cover", border:"2px dashed #1E40AF", filter:"contrast(110%)"}} width={size} height={size} alt="userImg"   />
 
         </Box>
     )

@@ -1,11 +1,24 @@
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import User from "../models/User.js"
+import { uploadOnCloudinary } from '../utils/cloudinary.js'
 
 /* Register User Authentication */
 
 export const register = async (req, res) => {
-    console.log(req.body.picturePath)
+    console.log(req.body.picturePath);
+    console.log(req.file.path)
+    
+    const localfilePath = req?.file?.path
+
+    if(!localfilePath) return res.status(404).json({message : "No File Found"});
+    console.log("here")
+
+    const profilePicture = await uploadOnCloudinary(localfilePath);
+
+    console.log("I am Here ")
+    console.log(profilePicture)
+    if(!profilePicture) return res.status(403).json({message : "Upload on Cloudinary"})
     try {
         const {
             firstName,
@@ -21,13 +34,15 @@ export const register = async (req, res) => {
         const salt = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, salt)
 
+
+
         const newUser = new User(
             {
             firstName,
             lastName,
             email,
             password: passwordHash,
-            picturePath,
+            picturePath : profilePicture?.url,
             friends,
             location,
             occupation,
