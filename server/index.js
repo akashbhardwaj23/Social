@@ -35,6 +35,8 @@ app.use(cors());
 // set the dir on where we keep our assets (images)
 app.use("/assets", express.static(path.join(__dirname, 'public/assets')))
 
+console.log(__dirname)
+
 
 /* FILE STORAGE */
 
