@@ -54,7 +54,8 @@ const initialValueLogin = {
 
 
 function Form() {
-    const [pageType, setPageType] = useState("login")
+    const [pageType, setPageType] = useState("login");
+    const [wrongPassoword, setWrongPassword] = useState(false);
     const {palette} = useTheme()
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -106,6 +107,15 @@ function Form() {
         )
 
         const loggedIn = await loggedUserResponse.json();
+        if(loggedIn.msg === 'Wrong Password'){
+            setWrongPassword(prev => !prev)
+           setTimeout(() => {
+                setWrongPassword(prev => !prev)
+           }, 6000)
+        }
+        if(loggedIn.msg === 'Wrong Password'){
+          return alert("Wrong Password")
+        }
         if(loggedIn){
             dispatch(
                 setLogin(
@@ -117,6 +127,7 @@ function Form() {
             );
             navigate("/home");
         }
+
         if(!loggedIn){
             alert("Invalid Credentials")
         }
@@ -354,7 +365,23 @@ function Form() {
                     </Typography>
                 </Box>
 
-
+                    {wrongPassoword ? (
+                         <Box>
+                         <Typography
+                             sx={
+                                 {
+                                    fontSize : "1rem",
+                                     textAlign: "center",
+                                     marginTop: "2rem",
+                                     transform : "translateY(-1rem)"
+                                 }
+                             }
+                             className='text-red-600 text-2xl'
+                         >
+                             {pageType === "login" ? "Password is Incorrect ?":"Welcome Back"}
+                         </Typography>
+                     </Box>
+                    ): null}
 
             </form>
         )}
