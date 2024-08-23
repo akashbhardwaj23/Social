@@ -145,7 +145,7 @@ const {
                     </Typography>
                     <FlexBetween gap={"1rem"} marginBottom={"0.5rem"}>
                         <FlexBetween gap={"1rem"}>
-                            <img src="../../../assets/twitter.png" alt="twitter" />
+                            <img src="https://utfs.io/f/551db9f9-7510-4cf7-8d4f-74ca18f714c0-f5khal.png" alt="twitter" />
                             <Box>
                                 <Typography color={main} fontWeight={"500"}>
                                     Twitter
@@ -160,7 +160,7 @@ const {
 
                     <FlexBetween gap={"1rem"}>
                         <FlexBetween gap={"1rem"}>
-                            <img src="../../../assets/linkedin.png" alt="Linkdenin" />
+                            <img src="https://utfs.io/f/36da299d-6d93-41ac-88a0-d0c9c933f0fb-jraewu.png" alt="Linkdenin" />
                             <Box>
                                 <Typography color={main} fontWeight={"500"}>
                                     LinkedIn

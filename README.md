@@ -1,6 +1,6 @@
 <h1> Social Media Site </h1>
 
-![picture alt](./clientSocial/src/assets/Social.png "Title is optional")
+![picture alt](https://utfs.io/f/05ef0eab-6ee8-40a3-834a-17be715b025c-tzitf7.png "Title is optional")
 
 
 
@@ -17,12 +17,12 @@
  ### Functionality Of Login
  -------------------------------------------------------------------------
 
- ![picture alt](./clientSocial//src/assets/SocialLogin.png)
+ ![picture alt](https://utfs.io/f/9cd400a0-69f1-4708-b156-940b7855f26e-5mgk6c.png)
 
 
 # Home
 
- ![home](./clientSocial//src/assets/Home.png)
+ ![home](https://utfs.io/f/08e078b7-1b7a-41c6-8209-05f3e7bd7dc5-1cc1r.png)
         
 
 ## How Can You Start The Application Locally
